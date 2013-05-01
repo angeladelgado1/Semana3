@@ -2,14 +2,15 @@
 and may not be redistributed without written permission.*/
 
 //The headers
-#include "SDL/SDL.h"
-#include "SDL/SDL_image.h"
-#include "SDL/SDL_mixer.h"
+#include "SDL.h"
+#include "SDL_image.h"
+#include "SDL_mixer.h"
 #include "Background.h"
 #include "Player.h"
 #include "Enemy.h"
 #include "Timer.h"
 #include <string>
+
 
 //Screen attributes
 const int SCREEN_WIDTH = 1000;
@@ -83,11 +84,13 @@ int main( int argc, char* args[] )
     update->start();
     SDL_Surface * game_over = IMG_Load( "game_over.png" );
 
-    TTF_Font *font = TTF_OpenFont( "lazy.ttf", 30 );
+    TTF_Font *font = TTF_OpenFont( "lazy.ttf", 35 );
     SDL_Color textColor = { 0, 0, 0 };
     SDL_Surface * score_surface = NULL;
 
     Mix_Chunk *jump = Mix_LoadWAV( "jump.ogg" );
+    Mix_Chunk *lose = Mix_LoadWAV( "lose.wav" );
+    Mix_Chunk *pantalla = Mix_LoadWAV( "pantalla.wav" );
 
     Background background(screen);
     Player player(screen);
@@ -97,6 +100,8 @@ int main( int argc, char* args[] )
     //Quit flag
     bool quit = false;
     int score=0;
+    int mue=0;
+     Mix_PlayChannel( -1, pantalla, 5 );
     while( quit == false )
     {
         //If there's an event to handle
@@ -130,20 +135,26 @@ int main( int argc, char* args[] )
         SDL_Rect offset;
         offset.x = 0;
         offset.y = 0;
-        SDL_Surface * score_surface = TTF_RenderText_Solid( font, toString(score+=5).c_str(), textColor );
-        SDL_BlitSurface( score_surface, NULL, screen, &offset );
-        SDL_Flip( screen );
-        SDL_FreeSurface( score_surface );
+        //SDL_Surface * score_surface = TTF_RenderText_Solid( font, toString(score+=5).c_str(), textColor );
+        //SDL_BlitSurface( score_surface, NULL, screen, &offset );
+        //SDL_Flip(screen);
+        //SDL_FreeSurface( score_surface );
 
         if(player.x-enemy.x<50
-           && player.x-enemy.x>-50
-           && player.y-enemy.y<50
+           && player.x-enemy.x>-20
+           && player.y-enemy.y<20
            && player.y-enemy.y>-50
            )
         {
-           break;
+            player.perder();
+            mue++;
+            Mix_PlayChannel( -1, lose, 0 );
         }
 
+        SDL_Surface * score_surface1 = TTF_RenderText_Solid( font, toString(mue).c_str(), textColor );
+        SDL_BlitSurface( score_surface1, NULL, screen, &offset );
+        SDL_Flip(screen);
+        SDL_FreeSurface( score_surface1 );
         background.render();
         player.render();
         enemy.render();

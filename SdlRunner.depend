@@ -125,3 +125,91 @@
 	"Timer.h"
 	<string>
 
+1366948416 source:c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana3-master\background.cpp
+	"Background.h"
+
+1366997293 c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana3-master\background.h
+	"SDL.h"
+	"SDL_image.h"
+	"SDL_ttf.h"
+	<string>
+
+1366948416 source:c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana3-master\enemy.cpp
+	"Enemy.h"
+
+1366998020 c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana3-master\enemy.h
+	"SDL.h"
+	"SDL_image.h"
+	"SDL_ttf.h"
+	<string>
+
+1367440944 source:c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana3-master\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	"SDL_mixer.h"
+	"Background.h"
+	"Player.h"
+	"Enemy.h"
+	"Timer.h"
+	<string>
+
+1367435939 c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana3-master\player.h
+	"SDL.h"
+	"SDL_image.h"
+	"SDL_ttf.h"
+	<string>
+
+1366998044 c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana3-master\timer.h
+	"SDL.h"
+
+1367438784 source:c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana3-master\player.cpp
+	"Player.h"
+	"Enemy.h"
+
+1366948416 source:c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana3-master\timer.cpp
+	"Timer.h"
+
+1366948416 source:c:\users\owner\desktop\escritorio\u\123\semana3\background.cpp
+	"Background.h"
+
+1366997293 c:\users\owner\desktop\escritorio\u\123\semana3\background.h
+	"SDL.h"
+	"SDL_image.h"
+	"SDL_ttf.h"
+	<string>
+
+1366948416 source:c:\users\owner\desktop\escritorio\u\123\semana3\enemy.cpp
+	"Enemy.h"
+
+1366998020 c:\users\owner\desktop\escritorio\u\123\semana3\enemy.h
+	"SDL.h"
+	"SDL_image.h"
+	"SDL_ttf.h"
+	<string>
+
+1367440944 source:c:\users\owner\desktop\escritorio\u\123\semana3\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	"SDL_mixer.h"
+	"Background.h"
+	"Player.h"
+	"Enemy.h"
+	"Timer.h"
+	<string>
+
+1367435939 c:\users\owner\desktop\escritorio\u\123\semana3\player.h
+	"SDL.h"
+	"SDL_image.h"
+	"SDL_ttf.h"
+	<string>
+
+1366998044 c:\users\owner\desktop\escritorio\u\123\semana3\timer.h
+	"SDL.h"
+
+1367438784 source:c:\users\owner\desktop\escritorio\u\123\semana3\player.cpp
+	"Player.h"
+	"Enemy.h"
+
+1366948416 source:c:\users\owner\desktop\escritorio\u\123\semana3\timer.cpp
+	"Timer.h"
+
